@@ -3,9 +3,8 @@
 const sizeControlRef = document.querySelector('#font-size-control');
 const textRef = document.querySelector('#text');
 
-console.log(sizeControlRef);
-console.log(textRef);
+sizeControlRef.addEventListener('input', event => { 
+    console.log(event.target.value);
+    textRef.style.fontSize = `${event.target.value}px`;
 
-sizeControlRef.addEventListener('click', event => { 
-    console.log('click');
 });

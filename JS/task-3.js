@@ -18,17 +18,11 @@ const images = [
   },
 ];
 
-const imgGalleryRef = document.querySelector('ul#gallery');
+const imgGalleryRef = document.querySelector('#gallery');
 imgGalleryRef.classList.add('gallery-container');
+let createTags = '';
 
-const createImagesGallery = images.map(img => {
-    const itemImgGallery = document.createElement('li');
-    itemImgGallery.classList.add('gallery-item');
-    const imgGallery = document.createElement('img');
-    imgGallery.classList.add('gallery-image');
-    imgGallery.alt = img.alt;
-    imgGallery.src = img.url;
-    itemImgGallery.appendChild(imgGallery);
-    imgGalleryRef.append(itemImgGallery);
-    return itemImgGallery;
-});
+images.forEach(image => { createTags += `<li class="gallery-item"><img class="gallery-image" src=${image.url} alt=${image.alt}></li>`;});
+imgGalleryRef.insertAdjacentHTML('afterbegin', createTags);
+
+

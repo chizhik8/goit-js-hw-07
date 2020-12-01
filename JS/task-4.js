@@ -6,11 +6,11 @@ const valueRef = document.querySelector('#value');
 let counterValue = 0;
 
 const increment = (event) => {
-    counterValue += Number(event.target.outerText);
+    counterValue++;
     valueRef.textContent = counterValue;
 };
 const decrement = (event) => {
-    counterValue += Number(event.target.outerText);
+    counterValue--;
     valueRef.textContent = counterValue;
 };
 
