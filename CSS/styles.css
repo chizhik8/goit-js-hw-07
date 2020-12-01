@@ -1,0 +1,38 @@
+.gallery-container {
+  width: 900px;
+  list-style: none;
+  margin: auto 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  width: 290px;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+#counter {
+  margin: 20px 0px;
+}
+
+#font-size-control {
+  display: block;
+  margin-top: 30px;
+}
